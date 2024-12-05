@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/estiloPac.css">
+    <meta charset="UTF-8">
+    <title>{{ Titulo }}</title>
+</head>
+<body>
+{# --- NAV --- #}
+<section class="Nav">
+    <a href="/" class="Logo">
+        <img class="IconLogo" src="../static/IconPsco.png">
+        <p class="TextoNav"><strong>Espaço Psicologia</strong></p>
+    </a>
+    <div class="Rotas">
+        <a class="TextoNav" href="/importancia">Importância</a>
+        <a class="TextoNav" href="/cadastroPac">Cadastro Pacientes</a>
+        <a class="TextoNav" href="/cadastroCon">Cadastro Consultas</a>
+        <a class="TextoNav" href="/exibirPaciente">Pacientes Cadastrados</a>
+        <a class="TextoNav" href="/exibirConsultas">Consultas Cadastrados</a>
+    </div>
+</section>
+
+{# --- PACIENTES --- #}
+<section class="Pacientes">
+    {% for paciente in ListaPac %}
+        <div class="paciente-card">
+
+            <h2>{{ paciente[1] }}</h2>
+            <p><strong>Data de Nascimento:</strong> {{ paciente[2] }}</p>
+            <p><strong>Gênero:</strong> {{ paciente[3] }}</p>
+            <p><strong>RG:</strong> {{ paciente[4] }}</p>
+            <p><strong>Endereço:</strong> {{ paciente[5] }}</p>
+            <p><strong>Email:</strong> {{ paciente[6] }}</p>
+            <p><strong>Telefone:</strong> {{ paciente[7] }}</p>
+
+            {# Ações #}
+            <div class="botoes">
+                <div>
+                   <a href="/editarPac/{{ paciente[0] }}">
+                         <img src="../static/Editar(1).png" alt="Editar">
+                   </a>
+                </div>
+
+                <div>
+                     <a href="/excluirPac/{{ paciente[0] }}">
+                        <img src="../static/Excluir.png" alt="Excluir">
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{# --- RODAPÉ --- #}
+<footer class="Rodape">
+    <p class="TextRodape">Feitor por: <em>Karoline Moraes</em></p>
+</footer>
+</body>
+</html>

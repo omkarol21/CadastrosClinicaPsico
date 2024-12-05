@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/estiloCons.css">
+</head>
+<body>
+    <!-- NAV -->
+    <section class="Nav">
+        <a href="/" class="Logo">
+            <img class="IconLogo" src="../static/IconPsco.png">
+            <p class="TextoNav"><strong>Espaço Psicologia</strong></p>
+        </a>
+        <div class="Rotas">
+            <a class="TextoNav" href="/importancia">Importância</a>
+            <a class="TextoNav" href="/cadastroPac">Cadastro Pacientes</a>
+            <a class="TextoNav" href="/cadastroCon">Cadastro Consultas</a>
+            <a class="TextoNav" href="/exibirPaciente">Pacientes Cadastrados</a>
+            <a class="TextoNav" href="/exibirConsultas">Consultas Cadastrados</a>
+        </div>
+    </section>
+
+    <!-- Lista de Consultas -->
+    <main style="height: 87vh">
+        <h1>Consultas Cadastradas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Data da Consulta</th>
+                    <th>Horário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for consulta in ListaCon %}
+                <tr>
+                    <!-- Nome do Paciente -->
+                    <td>
+                        {% for pac in pacientes %}
+                            {% if consulta[3] == pac[0] %}
+                                {{ pac[1] }}
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <!-- Data da Consulta -->
+                    <td>{{ consulta[2] }}</td>
+                    <!-- Horário -->
+                    <td>{{ consulta[1] }}</td>
+                    <!-- Botões de ação -->
+                    <td>
+                        <a href="/excluirConsulta/{{ consulta[0] }}">
+                            <button class="delete">Excluir</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="Rodape">
+        <p class="TextRodape">Feitor por: <em>Karoline Moraes</em></p>
+    </footer>
+</body>
+</html>
+

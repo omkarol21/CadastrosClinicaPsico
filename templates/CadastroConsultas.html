@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/estiloCadCon.css">
+</head>
+<body>
+
+    <!-- --- NAV --- -->
+    <section class="Nav">
+        <a href="/" class="Logo">
+            <img class="IconLogo" src="../static/IconPsco.png" alt="Logo">
+            <p class="TextoNav"><strong>Espaço Psicologia</strong></p>
+        </a>
+        <div class="Rotas">
+            <a class="TextoNav" href="/importancia">Importância</a>
+            <a class="TextoNav" href="/cadastroPac">Cadastro Pacientes</a>
+            <a class="TextoNav" href="/cadastroCon">Cadastro Consultas</a>
+            <a class="TextoNav" href="/exibirPaciente">Pacientes Cadastrados</a>
+            <a class="TextoNav" href="/exibirConsultas">Consultas Cadastrados</a>
+        </div>
+    </section>
+
+    <!-- --- CADASTRO DE CONSULTA --- -->
+    <section class="Form">
+        <div class="Formu">
+            <h2>{{ Titulo }}</h2>
+            <form class="Formulario" action="/criarConsulta" method="POST">
+
+                <!-- Campo para selecionar o paciente -->
+                <div class="Input">
+                    <label for="nomePac">Paciente</label>
+                    <select id="nomePac" name="nomePac" class="InserirInput" required>
+                        <option value="">Selecione um Paciente</option>
+                        <!-- Listando pacientes -->
+                        {% for paciente in listaPacientes %}
+                            <option value="{{ paciente[0] }}">{{ paciente[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Campo para selecionar a data da consulta -->
+                <div class="Input">
+                    <label for="dataCon">Data da Consulta</label>
+                    <input type="date" id="dataCon" name="dataCon" class="InserirInput" required>
+                </div>
+
+                <!-- Campo para inserir o horário da consulta -->
+                <div class="Input">
+                    <label for="horario">Horário</label>
+                    <input type="time" id="horario" name="horario" class="InserirInput" required>
+                </div>
+
+                <!-- Botões -->
+                <button type="submit" class="Btn">Cadastrar Consulta</button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- --- RODAPÉ --- -->
+    <footer class="Rodape">
+        <p class="TextRodape">Feito por: <em>Karoline Moraes</em></p>
+    </footer>
+
+</body>
+</html>

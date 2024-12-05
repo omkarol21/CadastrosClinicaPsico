@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* --- Navegação --- */
+.Nav {
+    font-family: 'Poppins', sans-serif;
+    background-color: #4267b2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box; /* Inclui padding dentro do tamanho total */
+    overflow: hidden; /* Evita transbordamento */
+}
+
+
+.Logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.IconLogo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.TextoNav {
+    font-size: 14px;
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.TextoNav:hover {
+    text-decoration: underline;
+}
+
+.Rotas {
+    display: flex;
+}
+
+.Subtitulo{
+    font-size: 30px;
+    font-family: "Concert One", sans-serif;
+    margin-bottom: 20px;
+}
+
+/* --- IMPORTÂNCIA --- */
+.Subtitulo{
+    font-size: 30px;
+    font-family: "Concert One", sans-serif;
+}
+
+
+.Texto{
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+
+.Importancia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f5ede5;
+}
+
+.Icon {
+    height: 250px;
+    width: auto;
+}
+
+.Informacoes {
+    width: 750px;
+    padding: 20px;
+}
+
+/* --- RODAPÉ --- */
+.Rodape {
+    background-color: #4267b2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+.TextRodape em {
+    font-style: italic;
+}

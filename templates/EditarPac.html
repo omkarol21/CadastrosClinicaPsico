@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Paciente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/estiloEditPac.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <section class="Nav">
+        <a href="/" class="Logo">
+            <img class="IconLogo" src="../static/IconPsco.png" alt="Logo">
+            <p class="TextoNav"><strong>Espaço Psicologia</strong></p>
+        </a>
+        <div class="Rotas">
+            <a class="TextoNav" href="/importancia">Importância</a>
+            <a class="TextoNav" href="/cadastroPac">Cadastro Pacientes</a>
+            <a class="TextoNav" href="/cadastroCon">Cadastro Consultas</a>
+            <a class="TextoNav" href="/exibirPaciente">Pacientes Cadastrados</a>
+            <a class="TextoNav" href="/exibirConsultas">Consultas Cadastrados</a>
+        </div>
+    </section>
+
+    <!-- EDITAR PACIENTE -->
+    <section class="Form">
+        <div class="Formu">
+            <h2 class="Subtitulo">Editar Paciente</h2>
+            <form class="Formulario" action="/alterarPac" method="POST">
+                <input type="hidden" name="idpac" value="{{ paciente[0] }}">
+
+                <div class="Input">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" class="InserirInput" value="{{ paciente[1] }}" required>
+                </div>
+
+                <div class="Input">
+                    <label for="rg">RG</label>
+                    <input type="text" id="rg" name="rg" class="InserirInput" value="{{ paciente[4] }}" required>
+                </div>
+
+                <div class="Input">
+                    <label for="genero">Gênero</label>
+                    <select id="genero" name="genero" class="InserirInput" required>
+                        <option value="Masculino" {% if paciente[3] == 'Masculino' %}selected{% endif %}>Masculino</option>
+                        <option value="Feminino" {% if paciente[3] == 'Feminino' %}selected{% endif %}>Feminino</option>
+                        <option value="Outro" {% if paciente[3] == 'Outro' %}selected{% endif %}>Outro</option>
+                    </select>
+                </div>
+
+                <div class="Input">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" class="InserirInput" value="{{ paciente[5] }}" required>
+                </div>
+
+                <div class="Input">
+                    <label for="dataNas">Data de Nascimento</label>
+                    <input type="date" id="dataNas" name="dataNas" class="InserirInput" value="{{ paciente[2] }}" required>
+                </div>
+
+                <div class="Input">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" class="InserirInput" value="{{ paciente[7] }}" required>
+                </div>
+
+                <div class="Input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="InserirInput" value="{{ paciente[6] }}" required>
+                </div>
+
+                <button type="submit" class="Btn">Salvar Alterações</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="Rodape">
+        <p class="TextRodape">Feito por: <em>Karoline Moraes</em></p>
+    </footer>
+
+</body>
+</html>

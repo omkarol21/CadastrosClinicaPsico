@@ -1,0 +1,138 @@
+/* CSS para a página Editar Paciente */
+
+/* Geral */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5ede5; /* Mesmo fundo da página de cadastro */
+}
+
+.Nav {
+    font-family: 'Poppins', sans-serif;
+    background-color: #4267b2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.IconLogo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.TextoNav {
+    font-size: 14px;
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.TextoNav:hover {
+    text-decoration: underline;
+}
+
+.Rotas {
+    display: flex;
+}
+
+.Subtitulo{
+    font-size: 30px;
+    font-family: "Concert One", sans-serif;
+}
+
+.Form {
+    height: 86vh;
+    background-color: #f5ede5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Formu {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Formulario {
+    width: 60%; /* Ajuste da largura do formulário */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+    padding: 20px;
+    display: grid; /* Utilizando grid para organizar os campos */
+    grid-template-columns: repeat(2, 1fr); /* Dois campos por linha */
+    grid-gap: 20px; /* Espaço entre os campos */
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 70px;
+}
+
+.Input label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+}
+
+.Input {
+    display: flex;
+    flex-direction: column;
+}
+
+.InserirInput {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(128, 128, 128, 0.5);
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Btn {
+    grid-column: span 2; /* Faz o botão ocupar a largura total */
+    background-color: #4169E1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    justify-self: center;
+}
+
+.Btn:hover {
+    background-color: #27408B;
+}
+
+.Rodape {
+    background-color: #4267b2;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+.TextRodape em {
+    font-style: italic;
+}

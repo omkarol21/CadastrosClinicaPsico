@@ -1,0 +1,132 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Nav{
+    background-color: #1860c6;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.IconLogo{
+    height: 40px;
+    width: auto;
+}
+
+.TextoNav{
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.Rotas{
+    margin: 15px;
+}
+
+h1{
+    color: #6699cc;
+    font-family: "Concert One", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf5ec;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #6699cc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo-img {
+    width: 40px;
+    margin-right: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+/* Tabela */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+thead {
+    background-color: #6699cc;
+    color: white;
+}
+thead th {
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+tbody tr:nth-child(odd) {
+    background-color: #eaf2ff;
+}
+tbody tr:nth-child(even) {
+    background-color: #f5faff;
+}
+td {
+    padding: 1rem;
+    text-align: center;
+}
+.delete {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.Rodape{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: #1860c6;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding-top: 1px;
+}
